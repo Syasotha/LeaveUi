@@ -29,7 +29,7 @@
                   </tr>
               </thead>
               <tbody>
-                  <tr *ngFor="let test of departmentAllDetails">
+                  <tr *ngFor="let test of department ">
                       <td>{{test.id}}</td>
                       <td>{{test.departmentName}}</td>
                       <td><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#EditModal">Edit</button>
@@ -63,7 +63,7 @@
                               <div class="row">
                                   <label class="control-label col-lg-6">Department Name:</label>
                                   <div class="col-lg-6">
-                                      <input type="text" class="form-control" name="username" [(ngModel)]="departmentDetailsobj.departmentName">
+                                      <input type="text" class="form-control" name="username">
                                   </div>
                               </div>
                           </div>

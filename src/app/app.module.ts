@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import{FormsModule}from '@angular/forms';
+import{FormsModule} from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,7 +16,7 @@ import { SidenavComponent } from './Navigation/sidenav/sidenav.component';
 import { FooternavComponent } from './Navigation/footernav/footernav.component';
 
 import{HttpClientModule} from '@angular/common/http';
-import { DepartmentService } from './Services/department.service';
+import { StatusService } from './Services/status.service';
 
 @NgModule({
   declarations: [
@@ -37,9 +36,9 @@ import { DepartmentService } from './Services/department.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
+    FormsModule
   ],
-  providers: [DepartmentService],
+  providers: [StatusService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
