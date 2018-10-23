@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
+import { Department } from '../Models/department';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DepartmentService {
 
-<<<<<<< Updated upstream
-  constructor() { }
-=======
   constructor(private httpObj: HttpClient) { }
 private departmentUrl='http://localhost:8080/department';
 
@@ -26,5 +25,4 @@ deleteDepartment(DepartmentDelet){
 editDepartmentById(editDepartmentDetails){
   return this.httpObj.put<Department>(this.departmentUrl,editDepartmentDetails);
 }
->>>>>>> Stashed changes
 }

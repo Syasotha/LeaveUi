@@ -29,7 +29,7 @@
                   </tr>
               </thead>
               <tbody>
-                  <tr *ngFor="let test of department ">
+                  <tr *ngFor="let test of departmentDetailsSave ">
                       <td>{{test.id}}</td>
                       <td>{{test.departmentName}}</td>
                       <td><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#EditModal" (click)="getDetailsId(test)">Edit</button>

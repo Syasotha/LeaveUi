@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DepartmentService } from 'src/app/Services/department.service';
+import { Department } from 'src/app/Models/department';
 
 @Component({
   selector: 'app-department',
@@ -6,10 +8,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./department.component.css']
 })
 export class DepartmentComponent implements OnInit {
+  departmentDetailsobj:Department=new Department();
+  departmentDetailsSave:Department[];  
 
-  constructor() { }
+
+
+
+  constructor(private departmentService:DepartmentService) { }
 
   ngOnInit() {
+    this.getDepartmentDetails();
+  }
+
+  getDepartmentDetails(){
+    this.departmentService.getAllDepartment().subscribe(departmetDetailsTable=>{
+      this.departmentDetailsSave=departmetDetailsTable;
+    });
+
+  }
+
+  addDepartment(){
+    this.departmentService.createDepartment(this.departmentDetailsobj).subscribe(saveDepartment=>{
+      this.getDepartmentDetails();
+      console.log(saveDepartment);
+    });
   }
 
   getDetailsId(departmentDetailsId){
@@ -20,16 +42,16 @@ export class DepartmentComponent implements OnInit {
   deleteDepartment(DepartmentDeletDetails){
     this.departmentService.deleteDepartment(DepartmentDeletDetails).subscribe(departmentDelete=>{
       this.departmentDetailsobj.id=DepartmentDeletDetails.id;
-      this.getDepartment();
-      alert("Delete Department Sucessfully");
+      this.getDepartmentDetails();
+      //alert("Delete Department Sucessfully");
     });
 
   }
 
   UpdateDepartmentDetails(){
     this.departmentService.editDepartmentById(this.departmentDetailsobj).subscribe(updatedDepartment=>{
-    this.getDepartment();
-    alert("Updated Department Sucessfully");
+    this.getDepartmentDetails();
+    //alert("Updated Department Sucessfully");
     });
   }
 
