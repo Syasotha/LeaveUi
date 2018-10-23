@@ -38,7 +38,8 @@ import { ApplyrequestComponent } from './applyrequest/applyrequest.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+
   ],
   providers: [LeavetypeService],
   bootstrap: [AppComponent]
