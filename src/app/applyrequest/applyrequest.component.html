@@ -1,0 +1,158 @@
+<div class="row">
+  <div class="col-md-8">
+    <div class="card">
+      <div class="card-header">Apply Leave Request</div>
+      <div class="card-body">
+        <form class="form-horizontal" action="/action_page.php">
+
+          <div class="row">
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="leave-type" class="col-sm-12">Leave Type</label>
+                <div class="col-sm-12">
+                  <select class="form-control" id="sel1">
+                    <option>Casual</option>
+                    <option>Annual</option>
+                    <option>Medical</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="col-sm-12" for="remain-days">Remaining Days:</label>
+                <div class="col-sm-12">
+                  <input type="email" class="form-control" id="email" placeholder="Remain Days" readonly>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row">
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="col-sm-6" for="start-date">Start Date:</label>
+                <div class="col-sm-12">
+                  <input type="date" class="form-control" id="start-date">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="col-sm-6" for="end-date">End Date:</label>
+                <div class="col-sm-12">
+                  <input type="date" class="form-control" id="end-date">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label class="col-sm-6" for="email">Reason:</label>
+                <div class="col-sm-12">
+                  <textarea class="form-control" id="email" placeholder="Enter Reason"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="control-label">
+            <button type="button" class="btn btn-primary">Request Leave</button>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="well">
+      <h6>Casual Leave:6</h6>
+      <div class="progress">
+      </div>
+      <h6>Medical Leave:10</h6>
+      <div class="progress">
+
+      </div>
+
+      <h6>Annual Leave:12</h6>
+      <div class="progress">
+      </div>
+
+    </div>
+
+    <div class="card">
+      <div class="card-header">Carry Forward</div>
+      <div class="card-body">
+        <button type="button" class="btn btn-primary">Apply Carry Forward </button>
+      </div>
+    </div>
+  </div>
+  <!-- Table -->
+  <div class="col-md-12 top-margin-space">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Leave History</h3>
+      </div>
+      <div class="panel-body">
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>Leave Type</th>
+              <th>Starting date</th>
+              <th>Ending date</th>
+              <th>Number of days</th>
+              <th>Reason</th>
+              <th>Status</th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td>Casual</td>
+              <td>01/10/2018</td>
+              <td>02/10/2018</td>
+              <td>10 days</td>
+              <td>Wedding</td>
+              <td>Open</td>
+              <td><button type="button" class="btn-md btn-danger">Cancel</button></td>
+            </tr>
+            <tr class="approved">
+              <td>Casual</td>
+              <td>01/10/2018</td>
+              <td>02/10/2018</td>
+              <td>10 days</td>
+              <td>Wedding</td>
+              <td>Approved</td>
+              <td><button type="button" class="btn-md btn-danger">Cancel</button></td>
+            </tr>
+
+            <tr class="rejected">
+              <td>Casual</td>
+              <td>01/10/2018</td>
+              <td>02/10/2018</td>
+              <td>10 days</td>
+              <td>Wedding</td>
+              <td>Rejected</td>
+              <td></td>
+            </tr>
+
+          </tbody>
+
+        </table>
+
+
+      </div>
+    </div>
+  </div>
+</div>
