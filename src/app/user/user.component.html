@@ -1,0 +1,430 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="row">
+        <div class="col-sm-6">
+          <h4 class="paddingformat">User</h4>
+        </div>
+        <div class="col-sm-6">
+          <div class="paddingformat float-right">
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#AddModal">Add User</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <!--Table-->
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>User Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Date Of Birth</th>
+            <th>Gender</th>
+
+            <th>Join Date</th>
+            <th>Role </th>
+            <th>Department </th>
+            <th>Service Period</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Jeya</td>
+            <td>Sivam</td>
+            <td>jey@gmail.com</td>
+            <td>01.01.2000</td>
+            <td>Female</td>
+            <td>01.08.2018</td>
+            <td>trainee</td>
+            <td>ICT</td>
+            <td>6 month</td>
+            <td>
+              <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#EditModal"
+                data-dismiss="modal"> Edit</button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#DeleteModal">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal for Add -->
+<div id="AddModal" class="modal">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Add User</h3>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="form-horizontal">
+
+          <div class="inline">
+            <div class="row">
+              <div class="form-group col-lg-6">
+                <div class="row">
+                  <label class="control-label col-lg-6">First Name:</label>
+                  <div class="col-lg-6">
+                    <input type="text" class="form-control" name="firstname">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-lg-6">
+                <div class="row">
+                  <label class="control-label col-lg-6">Last Name:</label>
+                  <div class="col-lg-6">
+                    <input type="text" class="form-control" name="lastname">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+            
+              <div class="inline">
+                <div class="row">
+                  <div class="form-group col-lg-6">
+                    <div class="row">
+                      <label class="control-label col-lg-6">User Name:</label>
+                      <div class="col-lg-6">
+                        <input type="text" class="form-control" name="firstname">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group col-lg-6">
+                    <div class="row">
+                      <label class="control-label col-lg-6">Email:</label>
+                      <div class="col-lg-6">
+                        <input type="text" class="form-control" name="Email">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+                  <div class="inline">
+                    <div class="row">
+                      <div class="form-group col-lg-6">
+                        <div class="row">
+                          <label class="control-label col-lg-6">Password:</label>
+                          <div class="col-lg-6">
+                            <input type="text" class="form-control" name="password">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <div class="row">
+                          <label class="control-label col-lg-6">Confirm Password:</label>
+                          <div class="col-lg-6">
+                            <input type="text" class="form-control" name="cpassword">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="inline">
+                    <div class="row">
+                      <div class="form-group col-lg-6">
+                        <div class="row">
+                          <label class="control-label col-lg-6">Gender:</label>
+                          <div class="col-lg-6">
+                            <input type="text" class="form-control" name="Gender">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <div class="row">
+                          <label class="control-label col-lg-6"> Date of Birth:</label>
+                          <div class="col-lg-6">
+                            <input type="text" class="form-control" name="dob">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="inline">
+                    <div class="row">
+                      <div class="form-group col-lg-6">
+                        <div class="row">
+                          <label class="control-label col-lg-6">Service period:</label>
+                          <div class="col-lg-6">
+                            <input type="text" class="form-control" name="gender">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <div class="row">
+                          <label class="control-label col-lg-6">Join Datejoindate:</label>
+                          <div class="col-lg-6">
+                            <input type="text" class="form-control" name="attachment">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="inline">
+                    <div class="row">
+                      <div class="form-group col-lg-6">
+                        <div class="row">
+                          <label class="control-label col-lg-6">Role:</label>
+                          <div class="col-lg-6">
+                            <input type="text" class="form-control" name="role">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <div class="row">
+                          <label class="control-label col-lg-6">Department:</label>
+                          <div class="col-lg-6">
+                            <input type="text" class="form-control" name="department">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="float-right">
+                          <button type="button" class="btn btn-primary btn-sm" data-toggle="modal">Add</button>
+                      </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+<!-- Modal for Edit -->
+<div id="EditModal" class="modal">
+    <div class="modal-dialog modal-lg">
+  
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Edit User</h3>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+  
+        <div class="modal-body">
+          <div class="form-horizontal">
+  
+            <div class="inline">
+              <div class="row">
+                <div class="form-group col-lg-6">
+                  <div class="row">
+                    <label class="control-label col-lg-6">First Name:</label>
+                    <div class="col-lg-6">
+                      <input type="text" class="form-control" name="firstname">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group col-lg-6">
+                  <div class="row">
+                    <label class="control-label col-lg-6">Last Name:</label>
+                    <div class="col-lg-6">
+                      <input type="text" class="form-control" name="lastname">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+              
+                <div class="inline">
+                  <div class="row">
+                    <div class="form-group col-lg-6">
+                      <div class="row">
+                        <label class="control-label col-lg-6">User Name:</label>
+                        <div class="col-lg-6">
+                          <input type="text" class="form-control" name="firstname">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <div class="row">
+                        <label class="control-label col-lg-6">Email:</label>
+                        <div class="col-lg-6">
+                          <input type="text" class="form-control" name="Email">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                    <div class="inline">
+                      <div class="row">
+                        <div class="form-group col-lg-6">
+                          <div class="row">
+                            <label class="control-label col-lg-6">Password:</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control" name="password">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group col-lg-6">
+                          <div class="row">
+                            <label class="control-label col-lg-6">Confirm Password:</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control" name="cpassword">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="inline">
+                      <div class="row">
+                        <div class="form-group col-lg-6">
+                          <div class="row">
+                            <label class="control-label col-lg-6">Gender:</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control" name="Gender">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group col-lg-6">
+                          <div class="row">
+                            <label class="control-label col-lg-6"> Date of Birth:</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control" name="dob">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="inline">
+                      <div class="row">
+                        <div class="form-group col-lg-6">
+                          <div class="row">
+                            <label class="control-label col-lg-6">Service period:</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control" name="gender">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group col-lg-6">
+                          <div class="row">
+                            <label class="control-label col-lg-6">Join Datejoindate:</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control" name="attachment">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="inline">
+                      <div class="row">
+                        <div class="form-group col-lg-6">
+                          <div class="row">
+                            <label class="control-label col-lg-6">Role:</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control" name="role">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group col-lg-6">
+                          <div class="row">
+                            <label class="control-label col-lg-6">Department:</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control" name="department">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="float-right">
+                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal">Add</button>
+                        </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+  
+  
+        <!-- Modal for Delete -->
+        <div class="modal fade" id="DeleteModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h6 class="modal-title">Confirmation</h6>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                <P>Are You Sure To Delete?</P>
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success btn-sm" data-dismiss="modal">Yes</button>
+                <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">No</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        
+<!-- Modal for Delete -->
+<div class="modal fade" id="DeleteModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h6 class="modal-title">Confirmation</h6>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <P>Are You Sure To Delete?</P>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success btn-sm" data-dismiss="modal">Yes</button>
+          <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
