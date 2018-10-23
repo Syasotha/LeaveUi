@@ -3,25 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { RoleComponent } from './Components/role/role.component';
 import { DepartmentComponent } from './Components/department/department.component';
-
-import { LeavetypeComponent } from './Components/leavetype/leavetype.component';
-import { UserComponent } from './user/user.component';
-import { ApplyrequestComponent } from './applyrequest/applyrequest.component';
-
 import { StatusComponent } from './Components/status/status.component';
-
-
+import { UserComponent } from './user/user.component';
 
 const routes: Routes = [
-  { path: 'rolename', component: RoleComponent },
-  { path: 'department', component: DepartmentComponent },
-
-  { path: 'leavetype', component: LeavetypeComponent },
-  { path: 'user', component: UserComponent },
-  { path: 'applyrequest', component: ApplyrequestComponent },
-
-  { path: 'status', component: StatusComponent },
-
+  {path: 'rolename', component:RoleComponent},
+  {path: 'department', component:DepartmentComponent},
+  {path: 'status', component:StatusComponent},
+  {path: 'user', component:UserComponent},
 ];
 
 @NgModule({
