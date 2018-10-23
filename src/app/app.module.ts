@@ -1,8 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import{FormsModule}from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AdminComponent } from './admin/admin.component';
@@ -17,8 +15,8 @@ import { SidenavComponent } from './Navigation/sidenav/sidenav.component';
 import { FooternavComponent } from './Navigation/footernav/footernav.component';
 
 import{HttpClientModule} from '@angular/common/http';
-import { DepartmentService } from './Services/department.service';
-
+import { RoleService } from './Services/role.service';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,8 +36,9 @@ import { DepartmentService } from './Services/department.service';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+
   ],
-  providers: [DepartmentService],
+  providers: [RoleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
