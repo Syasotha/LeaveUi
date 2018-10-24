@@ -20,6 +20,7 @@ import { LeavetypeService } from './Services/leavetype.service';
 import { ApplyrequestComponent } from './applyrequest/applyrequest.component';
 import { RoleService } from './Services/role.service';
 import { SidenavadminComponent } from './Navigation/sidenavadmin/sidenavadmin.component';
+import { StatusService } from './Services/status.service';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,7 @@ import { SidenavadminComponent } from './Navigation/sidenavadmin/sidenavadmin.co
 
   ],
   providers: [LeavetypeService,
-    RoleService
+    RoleService,StatusService
   ],
   bootstrap: [AppComponent]
 })
