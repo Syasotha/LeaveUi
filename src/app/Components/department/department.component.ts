@@ -34,10 +34,8 @@ export class DepartmentComponent implements OnInit {
     });
   }
 
-<<<<<<< HEAD
   
   
-=======
   getDetailsId(departmentDetailsId){
     this.departmentDetailsobj=Object.assign({},departmentDetailsId)
 
@@ -59,5 +57,4 @@ export class DepartmentComponent implements OnInit {
     });
   }
 
->>>>>>> 050f8383734287c372cf204511da757b81a3b3c4
 }

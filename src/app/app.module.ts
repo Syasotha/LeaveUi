@@ -18,6 +18,8 @@ import { FooternavComponent } from './Navigation/footernav/footernav.component';
 import{HttpClientModule} from '@angular/common/http';
 import { LeavetypeService } from './Services/leavetype.service';
 import { ApplyrequestComponent } from './applyrequest/applyrequest.component';
+import { RoleService } from './Services/role.service';
+import { SidenavadminComponent } from './Navigation/sidenavadmin/sidenavadmin.component';
 
 @NgModule({
   declarations: [
@@ -33,15 +35,18 @@ import { ApplyrequestComponent } from './applyrequest/applyrequest.component';
     SidenavComponent,
     FooternavComponent,
     ApplyrequestComponent,
+    SidenavadminComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
+    FormsModule,    
 
   ],
-  providers: [LeavetypeService],
+  providers: [LeavetypeService,
+    RoleService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
