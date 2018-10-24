@@ -59,28 +59,26 @@
 
             <!-- Modal body -->
             <div class="modal-body">
-                <!-- <form #status1="ngForm"> -->
-                <!-- <pre>
-                        {{status1 : json}}
-                    </pre> -->
-                <div class="form-horizontal">
-                    <div class="inline">
-                        <div class="row">
-                            <form class="col-md-5" #role1="ngForm">
-                                <!-- <pre>{{role1.value | json}}</pre>
-                                        <pre>{{roleObj | json}}</pre> -->
-                                <div class="form-group">
-                                    <label class="control-label col-lg-6">Status Name:</label>
-                                    <div class="col-lg-6">
-                                        <input type="text" class="form-control" name="statusname" [(ngModel)]="statusObj.status">
-                                    </div>
+                <form #role1="ngForm">
+                    <!-- <pre>{{role1.value | json}}</pre>
+                            <pre>{{roleObj | json}}</pre> -->
+                    <div class="form-horizontal">
+                        <div class="inline">
+                            <div class="row">
+
+                                <!-- <div class="form-group"> -->
+                                <label class="control-label col-lg-6">Status Name:</label>
+                                <div class="col-lg-6">
+                                    <input type="text" class="form-control" name="statusname" [(ngModel)]="statusObj.status">
                                 </div>
-                            </form>
+                            </div>
+
                         </div>
                     </div>
-                </div>
-                <!-- </form> -->
+                </form>
             </div>
+            <!-- </form> -->
+
 
             <!-- Modal footer -->
             <div class="modal-footer">
@@ -89,6 +87,7 @@
         </div>
     </div>
 </div>
+
 
 
 <!-- Modal for Edit -->
@@ -150,7 +149,7 @@
 
             <!-- Modal body -->
             <div class="modal-body">
-                <P>Are You Sure To Delete?</P>
+                <P>Do yout want to Delete?</P>
             </div>
 
             <!-- Modal footer -->
