@@ -22,6 +22,7 @@ import { RoleService } from './Services/role.service';
 import { SidenavadminComponent } from './Navigation/sidenavadmin/sidenavadmin.component';
 import { StatusService } from './Services/status.service';
 import { UserService } from './Services/user.service';
+import { DepartmentService } from './Services/department.service';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { UserService } from './Services/user.service';
 
   ],
   providers: [LeavetypeService,
-    RoleService,StatusService,UserService
+    RoleService,StatusService,
+    UserService,DepartmentService
   ],
   bootstrap: [AppComponent]
 })

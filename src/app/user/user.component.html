@@ -22,7 +22,7 @@
       <table class="table table-striped">
         <thead>
           <tr>
-            <th>User Id</th>
+            <th>User Name</th>
             <th>First Name</th>
             <th>Last Name</th>
             <th>Email</th>
@@ -39,15 +39,15 @@
         </thead>
         <tbody>
           <tr *ngFor="let usr of user">
-            <td>{{usr.id}}</td>
+            <td>{{usr.userName}}</td>
             <td>{{usr.firstName}}</td>
             <td>{{usr.lastName}}</td>
             <td>{{usr.email}}</td>
             <!-- <td>01.01.2000</td>
             <td>Female</td> -->
-            <td>{{usr.joinDate}}</td>
-            <td>{{usr.roleId}}</td>
-            <td>{{usr.departmentId}}</td>
+            <td>{{usr.joinDate | date: 'yyyy-MM-dd'}}</td>
+            <td>{{usr.roleId.roleName}}</td>
+            <td>{{usr.departmentId.departmentName}}</td>
             <td>{{usr.servicePeriod}}</td>
             <td>
               <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#EditModal"
@@ -176,7 +176,7 @@
               </div>
               <div class="form-group col-lg-6">
                 <div class="row">
-                  <label class="control-label col-lg-6">Join Date:</label>
+                  <label class="control-label col-lg-6" ng-model="selected">Join Date:</label>
                   <div class="col-lg-6">
                     <input type="date" class="form-control" name="joinDate" [(ngModel)]="userObj.joinDate">
                   </div>
@@ -189,23 +189,25 @@
             <div class="row">
               <div class="form-group col-lg-6">
                 <div class="row">
-                  <label class="control-label col-lg-6">Role:</label>
+                  <label class="control-label col-lg-6" ng-model="selected">Role:</label>
                   <div class="col-lg-6" >
-                      <!-- <select type="text" id="arole" ng-options="" ng-model="selectedCity">
-                          <option value="role">--Select Role--</option>
-                      </select> -->
-                    <input type="text" class="form-control" name="role" [(ngModel)]="userObj.roleId">
+                    <select class="form-control form-control-sm">
+                      <option selected default hidden>Select Role</option>
+                      <option *ngFor="let role of roles" value="{{role.id}}">{{role.roleName}}</option>
+                    </select>
+                    <!-- <input type="text" class="form-control" name="role" [(ngModel)]="userObj.roleId"> -->
                   </div>
                 </div>
               </div>
               <div class="form-group col-lg-6">
                 <div class="row">
-                  <label class="control-label col-lg-6">Department:</label>
+                  <label class="control-label col-lg-6" ng-model="selected">Department:</label>
                   <div class="col-lg-6">
-                      <!-- <select type="text" id="adep" ng-options="" ng-model="selectedCity">
-                          <option value="department">--Select Department--</option>
-                      </select> -->
-                    <input type="text" class="form-control" name="department" [(ngModel)]="userObj.departmentId">
+                    <select class="form-control form-control-sm">
+                      <option selected default hidden>Select Department</option>
+                      <option *ngFor="let department of departments" value="{{department.id}}">{{department.departmentName}}</option>
+                    </select>
+                    <!-- <input type="text" class="form-control" name="department" [(ngModel)]="userObj.departmentId"> -->
                   </div>
                 </div>
               </div>
@@ -284,7 +286,7 @@
             </div>
           </div>
 
-          <div class="inline">
+          <!-- <div class="inline">
             <div class="row">
               <div class="form-group col-lg-6">
                 <div class="row">
@@ -303,7 +305,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <!-- <div class="inline">
             <div class="row">
@@ -351,17 +353,25 @@
             <div class="row">
               <div class="form-group col-lg-6">
                 <div class="row">
-                  <label class="control-label col-lg-6">Role:</label>
+                  <label class="control-label col-lg-6" ng-model="selected">Role:</label>
                   <div class="col-lg-6" >
-                    <input type="text" class="form-control" name="role" [(ngModel)]="userEditObj.role">
+                      <select class="form-control form-control-sm">
+                          <option selected default hidden>Select Role</option>
+                          <option *ngFor="let role of roles" value="{{role.id}}" ng-selected="selected">{{role.roleName}}</option>
+                        </select>
+                    <!-- <input type="text" class="form-control" name="role" [(ngModel)]="userEditObj.role"> -->
                   </div>
                 </div>
               </div>
               <div class="form-group col-lg-6">
                 <div class="row">
-                  <label class="control-label col-lg-6">Department:</label>
+                  <label class="control-label col-lg-6" ng-model="selected">Department:</label>
                   <div class="col-lg-6">
-                    <input type="text" class="form-control" name="department" [(ngModel)]="userEditObj.department">
+                      <select class="form-control form-control-sm">
+                          <option selected default hidden>Select Department</option>
+                          <option *ngFor="let department of departments" value="{{department.id}}" ng-selected="selected">{{department.departmentName}}</option>
+                        </select>
+                    <!-- <input type="text" class="form-control" name="department" [(ngModel)]="userEditObj.department"> -->
                   </div>
                 </div>
               </div>
