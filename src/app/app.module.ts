@@ -23,6 +23,8 @@ import { SidenavadminComponent } from './Navigation/sidenavadmin/sidenavadmin.co
 import { StatusService } from './Services/status.service';
 import { UserService } from './Services/user.service';
 import { DepartmentService } from './Services/department.service';
+import { ApplyrequestService } from './Services/applyrequest.service';
+import { RemainingleaveComponent } from './remainingleave/remainingleave.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,7 @@ import { DepartmentService } from './Services/department.service';
     FooternavComponent,
     ApplyrequestComponent,
     SidenavadminComponent,
+    RemainingleaveComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,8 @@ import { DepartmentService } from './Services/department.service';
   ],
   providers: [LeavetypeService,
     RoleService,StatusService,
-    UserService,DepartmentService
+    UserService,DepartmentService,
+    ApplyrequestService
   ],
   bootstrap: [AppComponent]
 })

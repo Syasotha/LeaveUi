@@ -22,7 +22,7 @@ export class DepartmentService {
     return this.httpObj.delete(this.departmentUrl + "/" + DepartmentDelet.id);
   }
 
-  editDepartmentById(editDepartmentDetails) {
-    return this.httpObj.put<Department>(this.departmentUrl + "/" + editDepartmentDetails.id, editDepartmentDetails);
-  }
+editDepartmentById(editDepartmentDetails){
+  return this.httpObj.put<Department>(this.departmentUrl,editDepartmentDetails);
+}
 }

@@ -25,11 +25,12 @@ leaveTypeArr:Leavetype[];
 
   addLeaveTypes(){
     this.leavetypeService.CreateLeaveTypes(this.LeavetypeObj).subscribe(leavetypeDetails=>{
-      // alert("Leave Type Added");
+      // alert("Leave Type Added"); 
       console.log(leavetypeDetails);
       this.getAllLeaveTypes();
     });
   }
+
 
   deleteLeaveTypes(leaveType){
     this.leavetypeService.deleteLeaveTypes(leaveType).subscribe(leavetypeDetails=>{

@@ -11,10 +11,8 @@
               <div class="form-group">
                 <label for="leave-type" class="col-sm-12">Leave Type</label>
                 <div class="col-sm-12">
-                  <select class="form-control" id="sel1">
-                    <option>Casual</option>
-                    <option>Annual</option>
-                    <option>Medical</option>
+                  <select class="form-control">
+                    <option *ngFor="let leavetype of leaveTypeArr" value="{{leavetype.leaveType}}">{{leavetype.leaveType}}</option>
                   </select>
                 </div>
               </div>
@@ -37,7 +35,7 @@
               <div class="form-group">
                 <label class="col-sm-6" for="start-date">Start Date:</label>
                 <div class="col-sm-12">
-                  <input type="date" class="form-control" id="start-date">
+                  <input type="date" class="form-control" #startDate>
                 </div>
               </div>
             </div>
@@ -46,11 +44,10 @@
               <div class="form-group">
                 <label class="col-sm-6" for="end-date">End Date:</label>
                 <div class="col-sm-12">
-                  <input type="date" class="form-control" id="end-date">
+                  <input type="date" class="form-control" #endDate>
                 </div>
               </div>
             </div>
-
           </div>
 
           <div class="row">
@@ -64,30 +61,21 @@
             </div>
           </div>
           <div class="control-label">
-            <button type="button" class="btn btn-primary">Request Leave</button>
+            <button type="submit" class="btn btn-primary" (click)="createLeaveRequest(endDate.value,startDate.value)">Request Leave</button>
           </div>
-
         </form>
       </div>
-
     </div>
   </div>
 
   <div class="col-md-4">
-    <div class="well">
-      <h6>Casual Leave:6</h6>
-      <div class="progress">
-      </div>
-      <h6>Medical Leave:10</h6>
-      <div class="progress">
-
-      </div>
-
-      <h6>Annual Leave:12</h6>
-      <div class="progress">
-      </div>
-
-    </div>
+    <table>
+      <tr *ngFor="let remainDays of remainingDays">
+        <th>{{remainingDays.leaveTypeId}}</th>
+        <th>{{remainDays.remainDays}}</th>
+        <th>Hi</th>
+      </tr>
+    </table>
 
     <div class="card">
       <div class="card-header">Carry Forward</div>
@@ -96,6 +84,9 @@
       </div>
     </div>
   </div>
+
+
+
   <!-- Table -->
   <div class="col-md-12 top-margin-space">
     <div class="panel panel-default">
@@ -106,52 +97,32 @@
         <table class="table table-striped table-hover">
           <thead>
             <tr>
+              <th>Leave Request ID</th>
               <th>Leave Type</th>
               <th>Starting date</th>
               <th>Ending date</th>
               <th>Number of days</th>
               <th>Reason</th>
               <th>Status</th>
-              <th></th>
+              <th>Approved By</th>
+              <th>Recommended By</th>
             </tr>
           </thead>
-
           <tbody>
-
-            <tr>
-              <td>Casual</td>
-              <td>01/10/2018</td>
-              <td>02/10/2018</td>
-              <td>10 days</td>
-              <td>Wedding</td>
-              <td>Open</td>
+            <tr *ngFor="let history of applyLeaveRequest">
+              <td>{{history.id}}</td>
+              <td>{{history.leaveTypeId}}</td>
+              <td>{{history.startDate}}</td>
+              <td>{{history.endDate}}</td>
+              <td>{{history.leaveDays}}</td>
+              <td>{{history.reason}}</td>
+              <td>{{history.statusId}}</td>
+              <td>{{history.approvedBy}}</td>
+              <td>{{history.recommendedBy}}</td>
               <td><button type="button" class="btn-md btn-danger">Cancel</button></td>
             </tr>
-            <tr class="approved">
-              <td>Casual</td>
-              <td>01/10/2018</td>
-              <td>02/10/2018</td>
-              <td>10 days</td>
-              <td>Wedding</td>
-              <td>Approved</td>
-              <td><button type="button" class="btn-md btn-danger">Cancel</button></td>
-            </tr>
-
-            <tr class="rejected">
-              <td>Casual</td>
-              <td>01/10/2018</td>
-              <td>02/10/2018</td>
-              <td>10 days</td>
-              <td>Wedding</td>
-              <td>Rejected</td>
-              <td></td>
-            </tr>
-
           </tbody>
-
         </table>
-
-
       </div>
     </div>
   </div>
