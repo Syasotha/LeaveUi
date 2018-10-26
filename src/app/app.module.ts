@@ -18,6 +18,8 @@ import { FooternavComponent } from './Navigation/footernav/footernav.component';
 import{HttpClientModule} from '@angular/common/http';
 import { LeavetypeService } from './Services/leavetype.service';
 import { ApplyrequestComponent } from './applyrequest/applyrequest.component';
+import { ApplyrequestService } from './Services/applyrequest.service';
+import { RemainingleaveComponent } from './remainingleave/remainingleave.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { ApplyrequestComponent } from './applyrequest/applyrequest.component';
     SidenavComponent,
     FooternavComponent,
     ApplyrequestComponent,
+    RemainingleaveComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,7 @@ import { ApplyrequestComponent } from './applyrequest/applyrequest.component';
     FormsModule,
 
   ],
-  providers: [LeavetypeService],
+  providers: [ApplyrequestService,LeavetypeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

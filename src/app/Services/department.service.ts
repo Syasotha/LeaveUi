@@ -7,9 +7,6 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DepartmentService {
 
-<<<<<<< HEAD
-  constructor() { }
-=======
   constructor(private httpObj: HttpClient) { }
 private departmentUrl='http://localhost:8080/department';
 
@@ -28,5 +25,4 @@ deleteDepartment(DepartmentDelet){
 editDepartmentById(editDepartmentDetails){
   return this.httpObj.put<Department>(this.departmentUrl,editDepartmentDetails);
 }
->>>>>>> 050f8383734287c372cf204511da757b81a3b3c4
 }
