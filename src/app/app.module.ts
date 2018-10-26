@@ -20,11 +20,6 @@ import { LeavetypeService } from './Services/leavetype.service';
 import { ApplyrequestComponent } from './applyrequest/applyrequest.component';
 import { RoleService } from './Services/role.service';
 import { SidenavadminComponent } from './Navigation/sidenavadmin/sidenavadmin.component';
-import { StatusService } from './Services/status.service';
-import { UserService } from './Services/user.service';
-import { DepartmentService } from './Services/department.service';
-import { ApplyrequestService } from './Services/applyrequest.service';
-import { RemainingleaveComponent } from './remainingleave/remainingleave.component';
 
 @NgModule({
   declarations: [
@@ -41,19 +36,17 @@ import { RemainingleaveComponent } from './remainingleave/remainingleave.compone
     FooternavComponent,
     ApplyrequestComponent,
     SidenavadminComponent,
-    RemainingleaveComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,    
+    FormsModule, 
+       
 
   ],
   providers: [LeavetypeService,
-    RoleService,StatusService,
-    UserService,DepartmentService,
-    ApplyrequestService
+    RoleService
   ],
   bootstrap: [AppComponent]
 })

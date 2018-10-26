@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InteractionService } from '../UIService/interaction.service';
 
 @Component({
   selector: 'app-admin',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
-
-  constructor() { }
+  userNameParent: string;
+  constructor(private interaction: InteractionService) { }
 
   ngOnInit() {
+    this.interaction.loginCredential$.subscribe(data => {
+      // this.userNameParent = data.userName;
+      console.log("test");
+      if (data != null) {
+        console.log(data);
+        this.userNameParent = data.userName;
+      }
+
+    });
   }
 
 }

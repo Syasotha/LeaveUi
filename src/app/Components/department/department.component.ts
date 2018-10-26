@@ -34,6 +34,8 @@ export class DepartmentComponent implements OnInit {
     });
   }
 
+  
+  
   getDetailsId(departmentDetailsId){
     this.departmentDetailsobj=Object.assign({},departmentDetailsId)
 
