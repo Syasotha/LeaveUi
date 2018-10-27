@@ -23,6 +23,9 @@ import { SidenavadminComponent } from './Navigation/sidenavadmin/sidenavadmin.co
 import { CarryForwadRequestComponent } from './ManageLeaveRequest/carry-forwad-request/carry-forwad-request.component';
 import { LeaveRequestComponent } from './ManageLeaveRequest/leave-request/leave-request.component';
 
+import { StatusService } from './Services/status.service';
+import { UserService } from './Services/user.service';
+import { DepartmentService } from './Services/department.service';
 
 @NgModule({
   declarations: [
@@ -52,7 +55,8 @@ import { LeaveRequestComponent } from './ManageLeaveRequest/leave-request/leave-
 
   ],
   providers: [LeavetypeService,
-    RoleService
+    RoleService,StatusService,
+    UserService,DepartmentService
   ],
   bootstrap: [AppComponent]
 })
