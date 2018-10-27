@@ -44,7 +44,8 @@ import { DepartmentService } from './Services/department.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,    
+    FormsModule, 
+       
 
   ],
   providers: [LeavetypeService,

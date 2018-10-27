@@ -7,12 +7,21 @@ import { StatusComponent } from './Components/status/status.component';
 import { UserComponent } from './user/user.component';
 import { LeavetypeComponent } from './Components/leavetype/leavetype.component';
 
+import { ApplyrequestComponent } from './applyrequest/applyrequest.component';
+
+import { AdminComponent } from './admin/admin.component';
+
 const routes: Routes = [
   {path: 'rolename', component:RoleComponent},
   {path: 'department', component:DepartmentComponent},
   {path: 'status', component:StatusComponent},
   {path: 'user', component:UserComponent},
   {path: 'leaveType', component:LeavetypeComponent},
+
+  {path: 'admin', component:AdminComponent},
+  {path: '**', redirectTo: ''},
+
+  {path: 'applyLeaveRequest', component:ApplyrequestComponent},
 ];
 
 @NgModule({
@@ -20,3 +29,7 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+export const RoutingComponents = [
+  UserComponent
+  ];

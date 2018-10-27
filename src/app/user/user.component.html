@@ -26,8 +26,8 @@
             <th>First Name</th>
             <th>Last Name</th>
             <th>Email</th>
-            <!-- <th>Date Of Birth</th>
-            <th>Gender</th> -->
+            <th>Date Of Birth</th>
+            <th>Gender</th>
 
             <th>Join Date</th>
             <th>Role </th>
@@ -51,10 +51,10 @@
             <td>{{usr.servicePeriod}}</td>
             <td>
               <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#EditModal"
-                data-dismiss="modal" (click)="editStatus(usr)"> Edit</button>
+                data-dismiss="modal"> Edit</button>
             </td>
             <td>
-              <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#DeleteModal" (click)="editStatus(usr)">Delete</button>
+              <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#DeleteModal">Delete</button>
             </td>
           </tr>
         </tbody>
@@ -83,9 +83,9 @@
             <div class="row">
               <div class="form-group col-lg-6">
                 <div class="row">
-                  <label class="control-label col-lg-6" >First Name:</label>
+                  <label class="control-label col-lg-6">First Name:</label>
                   <div class="col-lg-6">
-                    <input type="text" class="form-control" name="firstname" [(ngModel)]="userObj.firstName">
+                    <input type="text" class="form-control" name="firstname">
                   </div>
                 </div>
               </div>
@@ -93,84 +93,96 @@
                 <div class="row">
                   <label class="control-label col-lg-6">Last Name:</label>
                   <div class="col-lg-6">
-                    <input type="text" class="form-control" name="lastname" [(ngModel)]="userObj.lastName">
+                    <input type="text" class="form-control" name="lastname">
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
+            
+              <div class="inline">
+                <div class="row">
+                  <div class="form-group col-lg-6">
+                    <div class="row">
+                      <label class="control-label col-lg-6">User Name:</label>
+                      <div class="col-lg-6">
+                        <input type="text" class="form-control" name="firstname">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group col-lg-6">
+                    <div class="row">
+                      <label class="control-label col-lg-6">Email:</label>
+                      <div class="col-lg-6">
+                        <input type="text" class="form-control" name="Email">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-          <div class="inline">
-            <div class="row">
-              <div class="form-group col-lg-6">
-                <div class="row">
-                  <label class="control-label col-lg-6">User Name:</label>
-                  <div class="col-lg-6">
-                    <input type="text" class="form-control" name="firstname" [(ngModel)]="userObj.userName">
+                  <div class="inline">
+                    <div class="row">
+                      <div class="form-group col-lg-6">
+                        <div class="row">
+                          <label class="control-label col-lg-6">Password:</label>
+                          <div class="col-lg-6">
+                            <input type="text" class="form-control" name="password">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <div class="row">
+                          <label class="control-label col-lg-6">Confirm Password:</label>
+                          <div class="col-lg-6">
+                            <input type="text" class="form-control" name="cpassword">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="form-group col-lg-6">
-                <div class="row">
-                  <label class="control-label col-lg-6">Email:</label>
-                  <div class="col-lg-6">
-                    <input type="text" class="form-control" name="Email" [(ngModel)]="userObj.email">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="inline">
-            <div class="row">
-              <div class="form-group col-lg-6">
-                <div class="row">
-                  <label class="control-label col-lg-6">Password:</label>
-                  <div class="col-lg-6">
-                    <input type="password" class="form-control" name="password" [(ngModel)]="userObj.password">
+                  <div class="inline">
+                    <div class="row">
+                      <div class="form-group col-lg-6">
+                        <div class="row">
+                          <label class="control-label col-lg-6">Gender:</label>
+                          <div class="col-lg-6">
+                            <input type="text" class="form-control" name="Gender">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <div class="row">
+                          <label class="control-label col-lg-6"> Date of Birth:</label>
+                          <div class="col-lg-6">
+                            <input type="text" class="form-control" name="dob">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="form-group col-lg-6">
-                <div class="row">
-                  <label class="control-label col-lg-6">Confirm Password:</label>
-                  <div class="col-lg-6">
-                    <input type="password" class="form-control" name="cpassword" [(ngModel)]="userObj.password">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <!-- <div class="inline">
-            <div class="row">
-              <div class="form-group col-lg-6">
-                <div class="row">
-                  <label class="control-label col-lg-6">Gender:</label>
-                  <div class="col-lg-6">
-                    <input type="text" class="form-control" name="Gender">
-                  </div>
-                </div>
-              </div>
-              <div class="form-group col-lg-6">
-                <div class="row">
-                  <label class="control-label col-lg-6"> Date of Birth:</label>
-                  <div class="col-lg-6">
-                    <input type="text" class="form-control" name="dob">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-          <div class="inline">
-            <div class="row">
-              <div class="form-group col-lg-6">
-                <div class="row">
-                  <label class="control-label col-lg-6">Service period:</label>
-                  <div class="col-lg-6">
-                    <input type="number" class="form-control" name="servicePeriod" [(ngModel)]="userObj.servicePeriod">
+                  <div class="inline">
+                    <div class="row">
+                      <div class="form-group col-lg-6">
+                        <div class="row">
+                          <label class="control-label col-lg-6">Service period:</label>
+                          <div class="col-lg-6">
+                            <input type="text" class="form-control" name="gender">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <div class="row">
+                          <label class="control-label col-lg-6">Join Datejoindate:</label>
+                          <div class="col-lg-6">
+                            <input type="text" class="form-control" name="attachment">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -213,73 +225,40 @@
               </div>
             </div>
           </div>
-
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="float-right">
-                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" (click)="addUser()" data-dismiss="modal">Add</button>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 
 <!-- Modal for Edit -->
 <div id="EditModal" class="modal">
-  <div class="modal-dialog modal-lg">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3>Edit User</h3>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-
-      <div class="modal-body">
-        <div class="form-horizontal">
-
-          <div class="inline">
-            <div class="row">
-              <div class="form-group col-lg-6">
-                <div class="row">
-                  <label class="control-label col-lg-6">First Name:</label>
-                  <div class="col-lg-6">
-                    <input type="text" class="form-control" name="firstname" [(ngModel)]="userEditObj.firstName">
+    <div class="modal-dialog modal-lg">
+  
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Edit User</h3>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+  
+        <div class="modal-body">
+          <div class="form-horizontal">
+  
+            <div class="inline">
+              <div class="row">
+                <div class="form-group col-lg-6">
+                  <div class="row">
+                    <label class="control-label col-lg-6">First Name:</label>
+                    <div class="col-lg-6">
+                      <input type="text" class="form-control" name="firstname">
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="form-group col-lg-6">
-                <div class="row">
-                  <label class="control-label col-lg-6">Last Name:</label>
-                  <div class="col-lg-6">
-                    <input type="text" class="form-control" name="lastname" [(ngModel)]="userEditObj.lastName">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="inline">
-            <div class="row">
-              <div class="form-group col-lg-6">
-                <div class="row">
-                  <label class="control-label col-lg-6">User Name:</label>
-                  <div class="col-lg-6">
-                    <input type="text" class="form-control" name="firstname" [(ngModel)]="userEditObj.userName">
-                  </div>
-                </div>
-              </div>
-              <div class="form-group col-lg-6">
-                <div class="row">
-                  <label class="control-label col-lg-6">Email:</label>
-                  <div class="col-lg-6">
-                    <input type="text" class="form-control" name="Email" [(ngModel)]="userEditObj.email">
+                <div class="form-group col-lg-6">
+                  <div class="row">
+                    <label class="control-label col-lg-6">Last Name:</label>
+                    <div class="col-lg-6">
+                      <input type="text" class="form-control" name="lastname">
+                    </div>
                   </div>
                 </div>
               </div>
@@ -295,12 +274,98 @@
                     <input type="password" class="form-control" name="password" [(ngModel)]="userEditObj.password">
                   </div>
                 </div>
-              </div>
-              <div class="form-group col-lg-6">
-                <div class="row">
-                  <label class="control-label col-lg-6">Confirm Password:</label>
-                  <div class="col-lg-6">
-                    <input type="password" class="form-control" name="cpassword" [(ngModel)]="userEditObj.password">
+  
+                    <div class="inline">
+                      <div class="row">
+                        <div class="form-group col-lg-6">
+                          <div class="row">
+                            <label class="control-label col-lg-6">Password:</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control" name="password">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group col-lg-6">
+                          <div class="row">
+                            <label class="control-label col-lg-6">Confirm Password:</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control" name="cpassword">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="inline">
+                      <div class="row">
+                        <div class="form-group col-lg-6">
+                          <div class="row">
+                            <label class="control-label col-lg-6">Gender:</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control" name="Gender">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group col-lg-6">
+                          <div class="row">
+                            <label class="control-label col-lg-6"> Date of Birth:</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control" name="dob">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="inline">
+                      <div class="row">
+                        <div class="form-group col-lg-6">
+                          <div class="row">
+                            <label class="control-label col-lg-6">Service period:</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control" name="gender">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group col-lg-6">
+                          <div class="row">
+                            <label class="control-label col-lg-6">Join Datejoindate:</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control" name="attachment">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="inline">
+                      <div class="row">
+                        <div class="form-group col-lg-6">
+                          <div class="row">
+                            <label class="control-label col-lg-6">Role:</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control" name="role">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group col-lg-6">
+                          <div class="row">
+                            <label class="control-label col-lg-6">Department:</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control" name="department">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="float-right">
+                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal">Add</button>
+                        </div>
+                        </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -346,8 +411,6 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
 
           <div class="inline">
             <div class="row">
@@ -378,42 +441,38 @@
             </div>
           </div>
 
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="float-right">
-                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-dismiss="modal" (click)="updateUserById()">Update</button>
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success btn-sm" data-dismiss="modal">Yes</button>
+                <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">No</button>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 
-
+        
 <!-- Modal for Delete -->
 <div class="modal fade" id="DeleteModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
+    <div class="modal-dialog">
+      <div class="modal-content">
 
-      <!-- Modal Header -->
-      <div class="modal-header">
-        <h6 class="modal-title">Confirmation</h6>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h6 class="modal-title">Confirmation</h6>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
 
-      <!-- Modal body -->
-      <div class="modal-body">
-        <P>Do you want To Delete?</P>
-      </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <P>Are You Sure To Delete?</P>
+        </div>
 
-      <!-- Modal footer -->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-success btn-sm" data-dismiss="modal" (click)="deleteUserById(userEditObj)">Yes</button>
-        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">No</button>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success btn-sm" data-dismiss="modal">Yes</button>
+          <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">No</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
